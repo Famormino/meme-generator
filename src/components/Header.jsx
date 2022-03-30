@@ -5,12 +5,12 @@ import logo from "../../Public/logo.png";
 export default function Header() {
   return (
     <>
-      <main className="header">
+      <header className="header">
         <div className="header__logo">
           <img src={logo} />
         </div>
         <div className="header__subTitle">React Course</div>
-      </main>
+      </header>
     </>
   );
 }
