@@ -13,7 +13,7 @@ export default function Meme() {
 
   function getMemeImage() {
     const memesArray = allMemeImages.data.memes;
-    const randomNumber = Math.floor(Math.random() * memesArray.length) + 1;
+    const randomNumber = Math.floor(Math.random() * memesArray.length);
     const url = memesArray[randomNumber].url;
 
     setMemeImage((prevMeme) => ({
@@ -31,7 +31,12 @@ export default function Meme() {
           Get a new meme image 🔎
         </button>
       </div>
-      <img className="form--image" src={memeImage.randomImage} />
+
+      <div className="meme">
+        <img className="form--image" src={memeImage.randomImage} />
+        <h2 className="meme--text top">One does not simply</h2>
+        <h2 className="meme--text bottom">Walk into Mordor</h2>
+      </div>
     </main>
   );
 }
