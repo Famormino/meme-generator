@@ -19,8 +19,9 @@ export default function Meme() {
     const randomNumber = Math.floor(Math.random() * allMemes.length);
     const url = allMemes[randomNumber].url;
 
-    setMemeImage((prevMeme) => ({
-      ...prevMeme,
+    setMemeImage(() => ({
+      topText: "",
+      bottomText: "",
       randomImage: url,
     }));
   }
